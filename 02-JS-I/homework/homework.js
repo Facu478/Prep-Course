@@ -85,16 +85,20 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num<90) {return true;}
-   else {return false}
+  if (num<90) {
+    return true;
+  } else {return false;
+  }
 }
 
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num>50) {return true;}
-  else {return false}
+  if (num>50) {
+    return true;
+  } else {return false;
+  }
 }
 
 function obtenerResto(x, y) {
@@ -108,24 +112,27 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num % 2 == 0){return true;}
-  else {return false}
+  if(num % 2 === 0){
+    return true;
+  } else {return false;
+  }
 }
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num % 2 ==1) {return true;}
-  else {return false}
+  if (num % 2 === 1) {
+    return true;
+  } else {return false;
+  }
 }
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  var elevarAlCuadrado = num* num;
-  return elevarAlCuadrado;
+  return Math.pow(num,2);
 }
 
 function elevarAlCubo(num) {
@@ -139,7 +146,7 @@ function elevarAlCubo(num) {
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
- return Math.pow(num, exponent); 
+ return num ** exponent; 
 }
 
 function redondearNumero(num) {
@@ -166,12 +173,10 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  var numero= str;
-  if(numero<0){
-    return 'es Negativo'
-  } else if (numero>0){
-    return 'es positivo'
-  } else{return false}
+  if(numero>0){ return "Es Positivo";
+} else if (numero< 0){ return "Es Negativo";
+}else{ return false;
+}
 }
 
 function agregarSimboloExclamacion(str) {
@@ -210,7 +215,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
- 
+ return lado *4;
 }
 
 
