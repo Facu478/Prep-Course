@@ -5,16 +5,26 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if (x>y){
-    return x} else {
-      return y }
+  if (x==y){
+    return x;
+  } else if (x>y){
+    return x;
+  } else {
+      return y;
+    }
     }
   
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-}
+  if(edad>=18){
+    return "Allowed";
+  }else{
+    return "Not allowed";
+  }
+  }
+
   
 function conection(status) {
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
@@ -22,7 +32,15 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-}
+  if(status === 1){
+    return "Online";
+  }else if(status === 2){
+    return "Away";
+  } else{
+    return "Offline";
+  }
+  }
+
 
 function saludo(idioma) {
   // Devuelve un saludo en tres diferentes lenguajes:
@@ -33,8 +51,8 @@ function saludo(idioma) {
   // Tu código:
   if (idioma=== 'aleman'){
     return "Guten Tag!";
-  } else if (idioma=== 'mandarin'){
-    return "Ni Hoa!";
+  } else if (idioma === 'mandarin'){
+    return "Ni Hao!";
   } else if (idioma=== 'ingles'){
         return "Hello!";
       } else { return "Hola!";}
@@ -50,6 +68,14 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  switch(color){
+    case 'blue': return "This is blue";
+    case 'red': return "This is red";
+    case 'green': return "This is green";
+    case'orange': return "This is orange";
+
+    default: return "Color not found";
+  }
 }
 
 function esDiezOCinco(numero) {
@@ -82,9 +108,9 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if(numero%1===0){
-    return true;
-  } else{ return false;
+  if(numero !== Math.floor(numero)){
+    return false;
+  } else{ return true;
   }
 
 }
@@ -107,7 +133,18 @@ function operadoresLogicos(num1, num2, num3) {
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
-  //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
+  if(num1 === 0 || num2 === 0 || num3 === 0){
+    return "Error";
+  } else if(mun3>num1 && mun3>num2){
+    returnnum3+1;
+  }else if(num3<0 ||num2<0 ||num1<0){
+    return "Hay negativos";
+  } else if(num1>mun2 && mun1>num3 && num1>0){
+    return "es mayor y positivo";
+  } else {
+    return false;
+  }
 }
 
 function esPrimo(numero) {
