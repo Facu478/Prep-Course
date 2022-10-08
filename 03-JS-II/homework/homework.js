@@ -93,7 +93,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if ( numero<50 && numero >20 ){
+  if ( numero<=50 && numero >=20 ){
     return true;
   }else{
     return false;
@@ -180,11 +180,11 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  let arraytablaDelSeis = [];
+  let arraytabla = []
   for(let i=0; i<11; i++){
-    arraytablaDelSeis.Push(6*i);
+    arraytabla.push(6*i);
   }
-  return arraytablaDelSeis;
+  return arraytabla;
 }
 
 function tieneTresDigitos(numero){
@@ -208,6 +208,7 @@ function doWhile(numero) {
     a=a+5;
   }
   while(n<8);
+  return a;
 }
 
 
