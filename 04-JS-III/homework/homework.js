@@ -1,39 +1,47 @@
 // No cambies los nombres de las funciones.
+// [45, 67, 100, 98, 78] = 5
+//   0   1   2    3   4
 
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  return array[0];
+   return array[0];
 }
+//console.log(devolverPrimerElemento([45, 67, 100, 98, 78]));
 
-
+// [45, 67, 100, 98, 78] = 5
+//   0   1   2    3   4
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
   return array[array.length-1];
 }
+//console.log(devolverUltimoElemento ([45, 67, 100, 98, 78])); 45
 
-
+// [45, 67, 100, 98, 78] = 5
+//   0   1   2    3   4
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
   return array.length;
 }
+//console.log(obtenerLargoDelArray([45, 67, 100, 98, 78])); 5
 
-
+// [45, 67, 100, 98, 78] = 5
+//   0   1   2    3   4
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
  var array1=[]
-    for(var i=0;i<array.length;i++){
+     for(var i=0;i<array.length;i++){
       let suma=array[i]+1;
-      array1.push(suma)
-    }
+      array1.push(suma);
+      }
  return array1
 }
-
+//console.log(incrementarPorUno([45, 67, 100, 98, 78])); 46, 68, 101,99, 79
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
@@ -42,8 +50,10 @@ function agregarItemAlFinalDelArray(array, elemento) {
   array.push(elemento);
   return array
 }
+//console.log(agregarItemAlFinalDelArray([45, 67, 100, 98, 78],200)); 45, 67, 100, 98, 78, 200 
 
-
+// [45, 67, 100, 98, 78,200] = 6
+//   0   1   2    3   4  5
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
@@ -52,6 +62,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   array.unshift(elemento);
   return array;
 }
+//console.log(agregarItemAlComienzoDelArray([45, 67, 100, 98, 78, 200],098)); 98, 45, 67, 100, 98, 78, 200
 
 
 function dePalabrasAFrase(palabras) {
@@ -60,9 +71,9 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  return palabras.join(' ')
+  return palabras.join(' ');
 }
-
+//console.log(dePalabrasAFrase(['Hello', 'world!'])); Hello word!
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
@@ -75,47 +86,78 @@ function arrayContiene(array, elemento) {
   }
   return false;
 }
+//console.log(arrayContiene(['facundo','Manuel'],'Manuel')); true 
 
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  var resultado;
-  for(var i=0; i<array.length; i++){
-    resultado=resultado+ array[i];
+  let suma=0;
+  for(let i=0; i<numeros.length; i++){
+    suma=suma+ numeros[i];
   }
-  return resultado;
+  return suma;
 }
-
+//console.log(agregarNumeros([10,10,10,1])); 31
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  return agregarNumeros(resultadosTest)/resultadosTest.length;
+  let suma =0;
+         for(var i=0; i<resultadosTest.length;i++){
+          suma=suma+resultadosTest[i];
+         }
+  return suma/resultadosTest.length;
 }
+//console.log(promedioResultadosTest([20/3])); 6.6666666666666667
 
-
+//[3444,9,23,7879] = 4
+//   0  1  2   3
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let max= numeros[0];
+  for(var i=0; i<numeros.length;i++){
+    if(numeros[i]>max){
+      max=numeros[i];
+    }
+  }
+  return max;
 }
+//console.log(numeroMasGrande([3444,9,23,7879])); 7879
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if(arguments.length< 1){
+    return 0;
+  }
+  let producto=1
+  for(let i=0;i<arguments.length;i++){
+     producto = producto * arguments[i];
+  }
+  return producto;
 }
+//console.log(multiplicarArgumentos([])); 0
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  suma=0;
+  for(let i=0;i<arreglo.length;i++){
+   if(arreglo[i]>18){
+    suma = suma + 1
+   }
+  }
+return suma;
 }
+//console.log(cuentoElementos([20,98,88,12])); 3
 
 
 function diaDeLaSemana(numeroDeDia) {
